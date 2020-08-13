@@ -3,11 +3,11 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "C/C++: g++ build root C++ file",
+      "label": "C/C++: g++ build App file",
       "command": "/usr/bin/g++",
       "args": [
         "-g",
-        "${workspaceFolder}/src/*cpp",
+        "${workspaceFolder}/src/App.*",
         "-o",
         "${workspaceFolder}/dist/build.out"
       ],
