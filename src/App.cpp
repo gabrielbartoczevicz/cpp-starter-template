@@ -7,25 +7,25 @@ using namespace std;
 class App
 {
 private:
-    vector<string> message;
+  vector<string> message;
 
 public:
-    void start()
+  void start()
+  {
+    message = {"Henlo", "from", "C/C++", "project", "template!"};
+
+    for (const string &m : message)
     {
-        message = {"Henlo", "from", "C/C++", "project", "template!"};
-
-        for (const string &m : message)
-        {
-            cout << m << " ";
-        }
-
-        cout << endl;
+      cout << m << " ";
     }
+
+    cout << endl;
+  }
 };
 
 int main()
 {
-    App app;
+  App app;
 
-    app.start();
+  app.start();
 }
