@@ -1,31 +1,23 @@
-#include <iostream>
-#include <vector>
-#include <string>
 
-using namespace std;
+#include <initializer_list>
+#include <stdio.h>
 
 class App
 {
-private:
-  vector<string> message;
-
 public:
-  void start()
-  {
-    message = {"Henlo", "from", "C/C++", "project", "template!"};
-
-    for (const string &m : message)
+    void start() noexcept
     {
-      cout << m << " ";
-    }
+        const std::initializer_list<const char*> message { "Henlo", "from", "C/C++", "project", "template!" };
 
-    cout << endl;
-  }
+        for (auto const& m : message)
+            printf("%s ", m);
+
+        printf("\n");
+    }
 };
 
 int main()
 {
-  App app;
-
-  app.start();
+    static App app;
+    app.start();
 }
