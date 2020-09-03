@@ -3,13 +3,14 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "C/C++: g++ build App file",
+      "label": "C/C++: g++ build application",
       "command": "/usr/bin/g++",
       "args": [
         "-g",
-        "${workspaceFolder}/src/App.*",
+        "${workspaceFolder}/src/*.*",
         "-o",
-        "${workspaceFolder}/dist/build.out"
+        "${workspaceFolder}/dist/build.out",
+        "-I src"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
