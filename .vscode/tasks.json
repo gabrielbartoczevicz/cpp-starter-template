@@ -3,7 +3,7 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "C/C++: g++ build application",
+      "label": "Build Application",
       "command": "/usr/bin/g++",
       "args": [
         "-g",
