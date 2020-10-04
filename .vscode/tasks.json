@@ -3,11 +3,33 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "Build Application",
+      "label": "Build C++ Application",
       "command": "/usr/bin/g++",
       "args": [
         "-g",
-        "${workspaceFolder}/src/*.*",
+        "${workspaceFolder}/src/*.cpp",
+        "-o",
+        "${workspaceFolder}/dist/build.out",
+        "-I src"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Build C Application",
+      "command": "/usr/bin/gcc",
+      "args": [
+        "-g",
+        "${workspaceFolder}/src/*.c",
         "-o",
         "${workspaceFolder}/dist/build.out",
         "-I src"

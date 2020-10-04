@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "g++ - Program Debug",
+      "name": "C++ Program Debug",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/dist/build.out",
@@ -19,7 +19,28 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "Build Application",
+      "preLaunchTask": "Build C++ Application",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
+      "name": "C Program Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/dist/build.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Ename pretty print gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build C Application",
       "miDebuggerPath": "/usr/bin/gdb"
     }
   ]

@@ -6,14 +6,12 @@ class App
 public:
   void start() noexcept
   {
-    const std::initializer_list<const char *> message{"Henlo", "from", "C/C++", "project", "template!"};
+    const std::initializer_list<const char *> message{"Henlo", "World", "\n"};
 
     for (auto const &m : message)
     {
       printf("%s ", m);
     }
-
-    printf("\n");
   }
 };
 
